@@ -60,13 +60,20 @@ export const generateDiary = async (req, res) => {
     // Generate image for the diary using Gemini
     let imageUrl = null;
     try {
-      const imagePrompt = `A warm, simple, charming ${styleDescription} style illustration for a diary entry.
-Mood: ${toneDescription}
-Scene: ${summary}
-Title: ${title}
+      const imagePrompt = `Create a warm, simple, charming ${styleDescription} style illustration for a diary entry.
+
+IMPORTANT: DO NOT include ANY text, letters, numbers, or words in the image. Only draw the visual scene with no written content.
+
+Mood/Tone: ${toneDescription}
+Scene to illustrate: ${summary}
 Emotion: ${detectedEmotion}
 
-Create a 386x386 pixel square illustration suitable for a picture diary. Soft colors, gentle style. No text in the image.`;
+Requirements:
+- 386x386 pixel square illustration
+- Suitable for a picture diary
+- Soft colors and gentle artistic style
+- NO TEXT WHATSOEVER - absolutely no words, letters, numbers, or writing
+- Pure illustration/artwork only`;
 
       console.log('📸 Starting image generation with Gemini...');
 
