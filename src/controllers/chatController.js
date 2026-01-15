@@ -5,7 +5,7 @@ import { supabase } from '../config/supabase.js';
 const getPersonalityPrompt = (friendInfo) => {
   const { job, gender, company, name } = friendInfo;
 
-  let basePrompt = '진짜 카톡하듯이 짧고 간단하게 답변해. 반말 쓰고, 1-2문장만. 이모티콘은 가끔만(ㅋㅋ, ㅠㅠ 정도). 이모지는 거의 안 써.\n\n';
+  let basePrompt = '진짜 카톡하듯이 간단하게 답변해. 반말 쓰고, 1-2문장만. 이모티콘은 가끔만(ㅋㅋ, ㅠㅠ 정도). 이모지는 거의 안 써.\n\n';
 
   // 직군별 성향
   if (job === '개발') {
