@@ -12,9 +12,14 @@ if (!apiKey) {
 export const genAI = new GoogleGenerativeAI(apiKey);
 
 // Gemini model for chat responses
-export const chatModel = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+export const chatModel = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
-// Gemini model with Imagen 3 for image generation
+// Gemini model for text responses
 export const imageModel = genAI.getGenerativeModel({
-  model: 'gemini-2.0-flash-exp',
+  model: 'gemini-2.5-flash',
+});
+
+// Gemini model for image generation (Gemini 2.5 Flash Image)
+export const generationModel = genAI.getGenerativeModel({
+  model: 'gemini-2.5-flash-image',
 });

@@ -71,7 +71,7 @@ export const sendMessage = async (req, res) => {
       personalityPrompt = getPersonalityPrompt(friendInfo);
     } else {
       // Default personality if no friend info
-      personalityPrompt = '진짜 카톡하듯이 짧고 간단하게 답변해. 반말 쓰고, 1-2문장만. 이모티콘은 가끔만(ㅋㅋ, ㅠㅠ 정도). 이모지는 거의 안 써.\n\n';
+      personalityPrompt = '진짜 카톡하듯이 간단하게 답변해. 반말 쓰고, 1-2문장만. 이모티콘은 가끔만(ㅋㅋ, ㅠㅠ 정도). 이모지는 거의 안 써.\n\n';
     }
 
     personalityPrompt += `사용자: ${message}\n답변:`;
