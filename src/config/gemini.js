@@ -12,11 +12,11 @@ if (!apiKey) {
 export const genAI = new GoogleGenerativeAI(apiKey);
 
 // Gemini model for chat responses
-export const chatModel = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+export const chatModel = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
 // Gemini model for text responses
 export const imageModel = genAI.getGenerativeModel({
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.0-flash',
 });
 
 // Gemini model for image generation (Gemini 2.5 Flash Image)
